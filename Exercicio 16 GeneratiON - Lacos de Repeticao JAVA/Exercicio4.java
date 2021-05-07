@@ -10,7 +10,7 @@ public class Exercicio4 {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		
-		// declaração de todas variáveis que serão necessárias durante a execução do algoritmo
+		// declaraÃ§Ã£o de todas variÃ¡veis que serÃ£o necessÃ¡rias durante a execuÃ§Ã£o do algoritmo
 		int idade, sexo, personalidade, pessoasCalmas=0, mulheresNervosas=0,homensAgressivos=0,
 			outrosCalmas=0,pessoasNervosasMais40=0, pessoasCalmasMenos18=0, contpessoas = 0;
 		
@@ -26,7 +26,7 @@ public class Exercicio4 {
 		 * 3 - Agressiva
 		 */
 		
-		while(contpessoas < 6) {
+		while(contpessoas < 150) {
 			
 			System.out.println("Insira sua idade:");
 			idade = entrada.nextInt();
@@ -38,24 +38,24 @@ public class Exercicio4 {
 			personalidade = entrada.nextInt();
 			
 			
-			if (personalidade == 1) { // contabiliza o número de pessoas calmas
+			if (personalidade == 1) { // contabiliza o nÃºmero de pessoas calmas
 				pessoasCalmas++;
 				
-				if ( idade < 18) { // contabiliza o número de pessoas calmas com menos de 18 anos
+				if ( idade < 18) { // contabiliza o nÃºmero de pessoas calmas com menos de 18 anos
 					pessoasCalmasMenos18++;
 				}
 				
-			} else if (personalidade == 2 && idade > 40) { // contabiliza o número de pessoas nervosas com mais de 40 anos
+			} else if (personalidade == 2 && idade > 40) { // contabiliza o nÃºmero de pessoas nervosas com mais de 40 anos
 				
 				pessoasNervosasMais40++;
 				
 			}
 			
-			if (sexo == 3 && personalidade == 1) { // contabilza o número de outros Calmos
+			if (sexo == 3 && personalidade == 1) { // contabilza o nÃºmero de outros Calmos
 				outrosCalmas++;
-			} else if (sexo == 1 && personalidade == 2) { // contabiliza o número de mulheres nervosas
+			} else if (sexo == 1 && personalidade == 2) { // contabiliza o nÃºmero de mulheres nervosas
 				mulheresNervosas++;
-			} else if (sexo == 2 && personalidade == 3) { // contabiliza o número de homens agressivos
+			} else if (sexo == 2 && personalidade == 3) { // contabiliza o nÃºmero de homens agressivos
 				homensAgressivos++;
 			}
 			
@@ -65,12 +65,12 @@ public class Exercicio4 {
 		}
 		
 		entrada.close();
-		System.out.println("Número de pessoas calmas: " + pessoasCalmas);
-		System.out.println("\nNúmero de mulheres nervosas: " + mulheresNervosas);
-		System.out.println("\nNúmero de homens agressivos: " + homensAgressivos);
-		System.out.println("\nNúmero de outros calmos: " + outrosCalmas);
-		System.out.println("\nNúmero de pessoas nervosas com mais de 40 anos: " + pessoasNervosasMais40);
-		System.out.println("\nNúmero de pessoas nervosas com menos de 18 anos: " + pessoasCalmasMenos18);
+		System.out.println("NÃºmero de pessoas calmas: " + pessoasCalmas);
+		System.out.println("\nNÃºmero de mulheres nervosas: " + mulheresNervosas);
+		System.out.println("\nNÃºmero de homens agressivos: " + homensAgressivos);
+		System.out.println("\nNÃºmero de outros calmos: " + outrosCalmas);
+		System.out.println("\nNÃºmero de pessoas nervosas com mais de 40 anos: " + pessoasNervosasMais40);
+		System.out.println("\nNÃºmero de pessoas nervosas com menos de 18 anos: " + pessoasCalmasMenos18);
 		
 	}
 	
