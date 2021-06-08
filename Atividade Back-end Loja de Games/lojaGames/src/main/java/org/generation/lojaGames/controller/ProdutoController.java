@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import org.generation.lojaGames.model.Categoria;
 import org.generation.lojaGames.model.Produto;
 import org.generation.lojaGames.repository.ProdutoRepository;
 
@@ -42,6 +43,12 @@ public class ProdutoController {
 	public ResponseEntity<List<Produto>> getByNome(@PathVariable String nome) {
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
+	
+	@GetMapping("/categoria/{categoria}")
+	public ResponseEntity<List<Produto>> getByCategoria(@PathVariable Categoria categoria) {
+		return ResponseEntity.ok(repository.findAllByCategoria(categoria));
+	}
+	
 	
 	@PostMapping
 	public ResponseEntity<Produto> post(@RequestBody Produto produto) {
